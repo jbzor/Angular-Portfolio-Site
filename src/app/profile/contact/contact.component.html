@@ -1,0 +1,107 @@
+<div class="section" id="contact">
+  <div class="cc-contact-information" style="background-image: url('assets/images/staticmap.png');">
+    <div class="container">
+      <div class="cc-contact">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="card mb-0" data-aos="zoom-in">
+              <div class="h4 text-center title">Contactez moi</div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <form #f="ngForm" (ngSubmit)="onSubmit(f)"  novalidate>
+                      <div class="p pb-3">
+                        <strong>N'hésitez pas à me contacter</strong>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="fa fa-user-circle"></i>
+                            </span>
+                            <input class="form-control" type="text" name="name" placeholder="Votre nom" [(ngModel)]="model.name" #name="ngModel" [ngClass]="{ 'is-invalid': f.submitted && name.invalid }"
+                              required/>
+                              <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+                                <div *ngIf="name.errors.required" class="pull-left">*le nom est requis</div>
+                              </div>  
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="fa fa-file-text"></i>
+                            </span>
+
+                            <input class="form-control" type="text" name="subject" placeholder="L'objet" [ngModel]="model.subject" #subject="ngModel" [ngClass]="{ 'is-invalid': f.submitted && subject.invalid }" required/>
+
+                              <div *ngIf="f.submitted && subject.invalid" class="invalid-feedback">
+                                <div *ngIf="subject.errors.required" class="pull-left">*l'objet est requis</div>
+                              </div> 
+
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="fa fa-envelope"></i>
+                            </span>
+                            <input class="form-control" type="text" name="email" placeholder="Votre e-mail" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                              pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required/>
+                             <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                                <div *ngIf="email.errors?.required" class="pull-left">*l'email est requis</div>
+                                <div *ngIf="email.errors?.pattern" class="pull-left">Entrer une adresse Email valide</div>
+                              </div> 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="form-group">
+                            <textarea class="form-control" name="message" placeholder="Votre Message" [(ngModel)]="model.message" #message="ngModel" [ngClass]="{ 'is-invalid': f.submitted && message.invalid }"
+                              required></textarea>
+                              <div *ngIf="f.submitted && message.invalid" class="invalid-feedback">
+                                <div *ngIf="message.errors.required" class="pull-left">*le message est requis</div>
+                              </div>  
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <button class="btn btn-primary" type="submit">Envoyer</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                      <p class="mb-0">
+                      <strong>Address </strong>
+                    </p>
+                    <p class="pb-2">Anatol, Douala, Cameroon, CM</p>  
+                    <p class="mb-0">
+                      <strong>Télephone</strong>
+                    </p>
+                    <p class="pb-2">+237 696 975 776</p>
+                    <p class="mb-0">
+                      <strong>Email</strong>
+                    </p>
+                    <p>nzudiej@gmail.com</p><p class="mb-0">
+                      <strong></strong>
+                    </p>
+                     
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-snotify class="material"></ng-snotify>
