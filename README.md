@@ -1,7 +1,7 @@
 # Cool-Angular-Portfolio-Site
 A portfolio site modeled with Angular and typescript
 
-***Note: Was built on Angular 6 --> Migrate to 7 ***
+***Note: CE PROJET a été construit sur angular 6 --> Migrer vers 9 ***
 
 - Use upgrade guide
   [Migration Guide][upgrade].
@@ -18,7 +18,7 @@ A portfolio site modeled with Angular and typescript
 
 # Angular
 
-Angular is a development platform for building mobile and desktop web applications using Typescript/JavaScript and other languages.
+Angular est une plate-forme de développement pour la création d’applications Web mobiles et de bureau en utilisant Typescript/JavaScript et d’autres langues.
 
 ## Quickstart
 
@@ -28,6 +28,6 @@ Angular is a development platform for building mobile and desktop web applicatio
 [ng]: https://angular.io
 [upgrade]: https://update.angular.io/
 [hosting]: https://firebase.google.com/docs/hosting
-[website]: https://personal-resume-42011.firebaseapp.com/#/
+
 
 
